@@ -1,28 +1,30 @@
 //DISCORD SERVER SETTINGS
-//TAGS: T6 IW5 T4 T5 IW4x IW6x S1x Sm2 Boiii H1
+//TAGS: plutonium xlabs h1 sm2 boiii
 const servers = [
 { 
+
     Name: 'Plutonium', 
     Profile: './assets/images/plutonium/profile.gif', 
     Description: 'All of the games we support include a dedicated server browser. No matter your favorite play style, mode or clan - theres probably a server for it!', 
     Members: '130,000 Members',
     Tags: 'T6 IW5 T4 T5',
-    Promote: 'true',
+    Promote: 'True',
     Link: "https://discord.gg/plutonium",
-    title: "Test"
+  
 },
 
 { 
-  Name: 'Plutonium', 
-  Profile: './assets/images/plutonium/profile.gif', 
-  Description: 'All of the games we support include a dedicated server browser. No matter your favorite play style, mode or clan - theres probably a server for it!', 
-  Members: '130,000 Members',
-  Tags: 'T6 IW5 T4 T5',
-  Promote: 'true',
-  Link: "https://discord.gg/plutonium",
-  title: "Test"
-},
 
+  Name: 'X labs', 
+  Profile: './assets/images/xlabs/profile.png', 
+  Description: 'X Labs clients restore missing features removed by the developers and further the capabilities of the games.', 
+  Members: '75,000 Members',
+  Tags: 'T6 IW5 T4 T5',
+  Promote: 'false',
+  Link: "https://discord.gg/plutonium",
+  Verified: `<i class="fa fa-badge-check"></i>`
+
+},
 
 
 ]
@@ -34,13 +36,13 @@ const addDiscord = (arr) => {
   let output = '';
   arr.forEach(server => {
     output += `
-<a target="_self" rel="noreferrer" title="${server.title}" href="${server.link}">
+<a target="_self" rel="noreferrer" title="" href="${server.Link}">
     <div class="relative overflow-hidden bot-card w-full h-full bg-admin p-6 rounded-xl cursor-pointer" ispromotion="${server.Promote}">
         <div class="relative z-[2]">
             <div class="flex items-center mb-4 gap-4">
                 <div>
                     <div class="relative w-16 h-16 rounded-lg overflow-hidden bg-input">
-                      <img src="./assets/images/plutonium/profile.gif" alt="bonkt" width="1024" height="512" decoding="async" data-nimg="1" class="w-full h-full object-cover" loading="lazy" style="color:transparent"/>
+                      <img src="${server.Profile}" alt="bonkt" width="1024" height="512" decoding="async" data-nimg="1" class="w-full h-full object-cover" loading="lazy" style="color:transparent"/>
                     </div>
                 </div>
                 <div class="w-full">

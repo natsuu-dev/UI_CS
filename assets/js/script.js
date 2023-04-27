@@ -8,8 +8,8 @@ const servers = [
     Description: 'All of the games we support include a dedicated server browser. No matter your favorite play style, mode or clan - theres probably a server for it!', 
     Members: '130,000 Members',
     Tags: 'T6 IW5 T4 T5',
-    Promote: 'True',
-    Link: "https://discord.gg/plutonium",
+    Promote: 'true',
+    Link: "https://discord.gg/invite/plutonium",
   
 },
 
@@ -17,15 +17,25 @@ const servers = [
 
   Name: 'X labs', 
   Profile: './assets/images/xlabs/profile.png', 
-  Description: 'X Labs clients restore missing features removed by the developers and further the capabilities of the games.', 
+  Description: 'sm² is a modded Call of Duty client based off the MW2 engine with new features, weapons, perks, streaks, maps, QOL changes and more.', 
   Members: '75,000 Members',
   Tags: 'T6 IW5 T4 T5',
   Promote: 'false',
-  Link: "https://discord.gg/plutonium",
-  Verified: `<i class="fa fa-badge-check"></i>`
+  Link: "https://discord.com/invite/xlabs",
 
 },
 
+{ 
+
+  Name: 'sm²', 
+  Profile: './assets/images/sm2/profile.png', 
+  Description: 'X Labs clients restore missing features removed by the developers and further the capabilities of the games.', 
+  Members: '120,000 Members',
+  Tags: 'T6 IW5 T4 T5',
+  Promote: 'false',
+  Link: "https://discord.com/invite/sm2",
+
+},
 
 ]
 

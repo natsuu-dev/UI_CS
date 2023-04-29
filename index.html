@@ -19,7 +19,7 @@
         </div>
     </div>
     <div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div>
-    <img alt="web-shapes" src="https://cdn.vcodes.xyz/assets/shapes.svg" class="absolute top-0 left-0 right-0 w-full user-select-none z-[-1]"/>
+    <img alt="web-shapes" src="shapes.svg" class="absolute top-0 left-0 right-0 w-full user-select-none z-[-1]"/>
     <div class="fixed top-0 light w-full h-full user-select-none z-[-1]"></div>
     <div>
         <main class="w-full min-h-[screen] flex flex-col lg:px-10 2xl:px-0">
@@ -65,7 +65,7 @@
             </div>
 
             <div class="pb-24">
-                <div class="container w-full min-h-[50vh] flex justify-center items-center py-36">
+                <div class="container w-full min-h-[30vh] flex justify-center items-center py-36">
                     <div class="w-full flex flex-col 2xl:flex-row justify-between items-center gap-24">
                         <div class="text-center 2xl:text-left relative space-y-8">
                             <div>
@@ -77,7 +77,7 @@
                                 <form>
                                     <div class="relative ">
                                         <div class="relative w-full bg-input text-white p-4 rounded-lg flex items-center gap-4 transition-all duration-200 border border-transparent border border-gray-600/20 hover:border-gray-600/40  w-full  cursor-text ">
-                                            <input placeholder="Search servers" autoComplete="off" class="false h-full placeholder-gray-600 peer bg-transparent w-full outline-none font-normal border-none false " id="search" value=""/>
+                                            <input placeholder="Search servers" autoComplete="off" class="false h-full placeholder-gray-600 peer bg-transparent w-full outline-none font-normal border-none false " id="server-search" value=""/>
                                             <i class="fal fa-search text-gray-600 px-2 pl-4"></i>
                                         </div>
                                         <div class="flex flex-col mt-2"></div>
@@ -85,7 +85,7 @@
                                 </form>
                             </div>
                             <div class="hidden lg:flex items-center justify-start overflow-auto text-center gap-2 transition-all w-full">
-                                <a class="w-full" title="tag_link" href="/explore?tags=Moderation">
+                                <a class="w-full" title="tag_link" data-filter="T6">
                                     <div as="div" class="w-full flex items-center gap-2 justify-between px-3 py-2 cursor-pointer border border-gray-400/20 shadow-lg shadow-gray-400/0 hover:shadow-blue-600/10 hover:border-blue-600 active:opacity-60 rounded-lg transition-all duration-200 select-none">
                                         <i class="fa-light fa-hashtag mr-2 text-white/60"></i>
                                         <span class="text-white font-light text-sm tracking-wide">plutonium</span>
@@ -135,11 +135,11 @@
                             <div class="flex items-center gap-2">
                                 <div class="flex flex-col">
                                     <div class="flex items-center gap-1 mb-1">
-                                        <div class="hidden lg:flex items-center justify-center w-8 h-8 !text-lg bg-blue-600 rounded-xl mr-1 ">
+                                      <!-- <div class="hidden lg:flex items-center justify-center w-8 h-8 !text-lg bg-blue-600 rounded-xl mr-1 ">
                                             <i class="fa-solid fa-server text-2xl text-black dark:text-white text-lg !text-[var(--body)]"></i>
                                         </div>
-                                        <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 ">Official Call Of Duty Client Servers</h2>
-                                    </div>
+                                       <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 ">Official Call Of Duty Client Servers</h2>   -->
+                                    </div> 
                                     <p class="font-light text-white/50 text-sm ">These servers are the official client servers</p>
                                 </div>
                             </div>
@@ -147,6 +147,7 @@
                                 <span class="text-sm font-light">See All</span>
                             </div>
                         </div>
+
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 base:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-4 gap-4" id="root"></div>
 
                             <div class="bot-card bg-admin w-full rounded-xl text-center !mt-24" ispromotion="true">
@@ -167,62 +168,10 @@
                                             <img src="./assets/images/xlabs/profile.png" alt="logo"  width="1024" height="512" decoding="async" data-nimg="1" class="w-16 h-16 rounded-xl bg-cover bg-center" loading="lazy" style="color:transparent"/>
                                             <img src="./assets/images/xlabs/profile.png" alt="logo"  width="1024" height="512" decoding="async" data-nimg="1" class="w-16 h-16 rounded-xl bg-cover bg-center" loading="lazy" style="color:transparent"/>
                                             <img src="./assets/images/xlabs/profile.png" alt="logo"  width="1024" height="512" decoding="async" data-nimg="1" class="w-16 h-16 rounded-xl bg-cover bg-center" loading="lazy" style="color:transparent"/>
-                                          
-                                        </div>
                                     </div>
                                 </div>
-
-                                
-                                
+                            </div> 
                         </div> 
-                        
-                        <div class="hidden lg:block container w-full pt-20 py-6 mb-28 lg:mb-0">
-                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 py-12">
-                                <div class="col-span-2">
-                                    <div class="flex items-center mb-3 gap-3">
-                                        <img class="pointer-events-none" src="https://cdn.vcodes.xyz/assets/logo.png" alt="logo" width="48" height="48"/>
-                                        <p class="pointer-events-none text-white font-semibold text-2xl">vCodes</p>
-                                    </div>
-                                    <p class="text-zinc-300 break-wrods">Do you want to add and expand your Discord bots to reach more audiences? Here vCodes are here for you. You can add your Discord bots.</p>
-                                </div>
-                                <div class="col-span-3 flex gap-24 flex-wrap">
-                                    <div>
-                                        <p class="xl:mt-0 text-xl text-white font-semibold mb-2">Links</p>
-                                        <div class="flex flex-col text-md">
-                                            <a title="footer_link" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer" href="/">Home</a>
-                                            <a title="footer_link" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer" href="/explore">Explore</a>
-                                            <a title="footer_link" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer" href="/partners">Partners</a>
-                                            <a title="footer_link" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer" href="/discord">Our Community</a>
-                                            <a href="https://developers.vcodes.xyz" title="footer_link" target="_blank" rel="nofollow noreferrer" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer">Developers</a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="xl:mt-0 text-xl text-white font-semibold mb-2">Legal</p>
-                                        <div class="flex flex-col text-md">
-                                            <a title="footer_link" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer" href="/discord">Contact Us</a>
-                                            <a title="footer_link" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer" href="/discord">Report a Bug</a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="xl:mt-0 text-xl text-white font-semibold mb-2">Social Media</p>
-                                        <div class="flex flex-col text-md">
-                                            <a href="https://twitter.com/vDiscordBots" title="footer_link" target="_blank" rel="nofollow noreferrer" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer">Twitter</a>
-                                            <a href="/discord" title="footer_link" target="_blank" rel="nofollow noreferrer" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer">Discord</a>
-                                            <a href="https://github.com/vcodes-xyz" title="footer_link" target="_blank" rel="nofollow noreferrer" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer">GitHub</a>
-                                            <a href="https://instagram.com/vDiscordBots" title="footer_link" target="_blank" rel="nofollow noreferrer" class="text-white/50 hover:text-white transition-all duration-200 cursor-pointer">Instagram</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="py-10 flex flex-col items-center justify-center lg:flex-row lg:items-center lg:justify-between w-full text-white border-t border-zinc-600/20 mt-5">
-                                <p class="text-center lg:text-left">© 2023 Codservers, All rights reserved.</p>
-                                <p class="text-center lg:text-right">
-                                    Made with <span class="text-blue-500">❤</span>
-                                    by <a href="https://voiddevs.org" target="_blank" rel="nofollow noreferrer" class="text-white hover:text-white/50 transition-all duration-200">natsuu</a>
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>

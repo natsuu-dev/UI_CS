@@ -46,7 +46,7 @@ const addDiscord = (arr) => {
   let output = '';
   arr.forEach(server => {
     output += `
-<a target="_self" rel="noreferrer" title="" href="${server.Link}">
+<a target="_blank" rel="noreferrer" title="" href="${server.Link}">
     <div class="relative overflow-hidden bot-card w-full h-full bg-admin p-6 rounded-xl cursor-pointer" ispromotion="${server.Promote}">
         <div class="relative z-[2]">
             <div class="flex items-center mb-4 gap-4">

@@ -1950,11 +1950,11 @@ ol li {
 }
 
 html#rome:root {
-    --color-primary: #FBAD53;
+    --color-primary: #e14d43;
     --color-primary-rgb: 251,173,83;
     --color-primary-contrast: #000000;
     --color-primary-contrast-rgb: 0,0,0;
-    --color-primary-shade: #dd9849;
+    --color-primary-shade: #c6443b;
     --color-primary-tint: #fbb564
 }
 
@@ -2134,4 +2134,21 @@ h1:hover .heading-link,h2:hover .heading-link,h3:hover .heading-link,h4:hover .h
 
 .defender-pics img {
     width: 100%
+}
+
+::-webkit-scrollbar{
+    width:14px
+}
+
+::-webkit-scrollbar-track{
+    background-color: #030712;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #c6443b;
+  border-radius:9px;
+  border:5px solid #030712;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #adbac7;
+    border-radius: 10px;
 }

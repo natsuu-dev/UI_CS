@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Make History, an arknights skin (post row + mini-profile)</title>
+  <script src="https://code.jquery.com/jquery-1.7.2.js"></script>
+<script src="//glenthemes.github.io/iconsax/geticons.js"></script>
+<link href="//glenthemes.github.io/iconsax/style.css" rel="stylesheet">
+<script src="//d3js.org/d3.v3.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Passions+Conflict&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<body class="MH-ID4">
+  <div id="wrapper">
+    <div class="makehistory-sidebar">
+      <a href="#"><i class="ph-fill ph-caret-circle-up"></i></a>
+      <a href="#"><i class="ph ph-identification-card"></i></a>
+      <a href="#"><i class="ph-fill ph-bookmark"></i></a>
+      <a href="#"><i class="ph-fill ph-envelope"></i></a>
+      <a href="#"><i class="ph-fill ph-bell"></i></a>
+      <a href="#"><i class="ph-fill ph-user-circle-gear"></i></a>
+      <a href="#"><i class="ph ph-dots-three-circle"></i></a>
+      <a href="#"><i class="ph ph-crown"></i></a>
+      <a href="#"><i class="ph-fill ph-caret-circle-down"></i></a>
+
+      <a href="#" id="toggleColor" style="margin-top:auto;margin-bottom: 20px;" title="Toggle Light/Dark Mode"><i class="ph-fill ph-sun"></i></a>
+    </div>
+    <div class="makehistory-wrapper">
+      <div id="particles-js"></div>
+      <div class="makehistory-banner">
+        <div class="bann-0">
+          <h1>lingering echoes</h1>
+          <h2><i>A NON-CANON ARKNIGHTS RP</i></h2>
+        </div>
+        <div class="bann-img"></div>
+        <input type="radio" id="ONE" name="GROUP" checked>
+        <input type="radio" id="THREE" name="GROUP">
+        <input type="radio" id="FOUR" name="GROUP">
+        <input type="radio" id="TWO" name="GROUP">
+        <div class="makehistory-banner-labels">
+          <label id="tabone" for="ONE"><a title="home"><i title="home" class="ph-fill ph-star-four"></i>
+              <h1>home</h1>
+            </a>
+          </label>
+          <label id="tabthree" for="THREE"><a title="staff"><i class="ph-fill ph-shooting-star"></i>
+              <h1>staff</h1>
+            </a>
+          </label>
+          <label id="tabfour" for="TWO"><a title="census"><i title="site census" class="ph-fill ph-users-three"></i>
+              <h1>census</h1>
+            </a>
+          </label>
+          <label id="tabfour" for="FOUR"><a title="credits"><i title="credits" class="ph-fill ph-shield-star"></i>
+              <h1>credits</h1>
+            </a>
+          </label>
+        </div>
+        <div class="makehistory-abt">
+          <h3><b>LINGERING ECHOES</b> is a non-canon, sandbox Arknights RP set before the events told in the game.
+            Oripathy, a dreaded terminal disease. It remains an issue for all Terran life, but some have decided to approach how they deal with it in different ways.
+            <br><br>
+            Rhodes Island maintains a somewhat peaceful approach and searches for a cure, while Reunion and its members have had enough of the treatment of Infected and have resorted to drastic measures. This conflict has continued to spread across the continent and many Terrans are quickly becoming aware of the on-going battle between the two factions.
+            <br><br>
+            It is only a matter of time before Terra is plunged into chaos, and it is up to you to decide which side you are on.
+          </h3>
+        </div>
+        <div class="makehistory-staff">
+          <a href="#" title="view lua's profile">
+            <div class="staffbox">
+              <h1>// 01</h1>
+              <h2>lua</h2>
+              <div class="staffdiv"><img src="https://a.l3n.co/i/B9bRA2.png"></div>
+            </div>
+          </a>
+          <a href="#" title="view crow's profile">
+            <div class="staffbox">
+              <h1>// 02</h1>
+              <h2>crow</h2>
+              <div class="staffdiv"><img src="https://c.l3n.co/i/B95H6H.png"></div>
+            </div>
+          </a>
+          <a href="#" title="view jenesis's profile">
+            <div class="staffbox">
+              <h1>// 03</h1>
+              <h2>jenesis</h2>
+              <div class="staffdiv"><img src="https://a.l3n.co/i/B95uh9.png"></div>
+            </div>
+          </a>
+          <a href="#" title="view ruby's profile">
+            <div class="staffbox">
+              <h1>// 04</h1>
+              <h2>ruby</h2>
+              <div class="staffdiv"><img src="https://b.l3n.co/i/B9bCTz.png"></div>
+            </div>
+          </a>
+          <a href="#" title="view bec's profile">
+            <div class="staffbox">
+              <h1>// 05</h1>
+              <h2>bec</h2>
+              <div class="staffdiv"><img src="https://c.l3n.co/i/B9bTQv.png"></div>
+            </div>
+          </a>
+        </div>
+        <div class="makehistory-cred">
+          <h3>
+            Arknights as a concept and story belongs to <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwisnf3R8vj4AhXeIUQIHY-HA0oQFnoECAUQAQ&amp;url=https%3A%2F%2Fwww.hypergryph.com%2F&amp;usg=AOvVaw0TFfpvwIVHoOnEZ3AW8ZnU">Hypergryph</a>. The canon-divergent premise of <b>Lingering Echoes</b> was conceptualized by <a href="https://oripathy.jcink.net/index.php?showuser=1">the staff team</a>.
+            <br><br>
+            Our skin and templates were designed and coded by <a href="https://pixel-perfect.boards.net/user/4251">Lua</a> for exclusive use on Lingering Echoes and shall not be sold for commercial use without permission. All art and graphics used on the skin belong to their respective owners, and usage of said art and graphics is being used purely for non-commerical endeavors. The automated census script is attributed to <a href="https://fizzyelf.jcink.net/index.php" rel="nofollow noopener" target="_blank">fizzyelf</a>. The custom field script on posting templates was created by <a href="https://codepen.io/selkie/pen/XWgNzoP">selkie</a>.
+            <br><br>
+            Plagiarism or theft of characters and writing on Lingering Echoes will not be tolerated. All individual characters and their writing belong to the members of Lingering Echoes.
+          </h3>
+        </div>
+        <div class="makehistory-census">
+          <div class="faction-c">
+            <h1>15</h1>
+            <i class="icon-rhodesisland"></i>
+          </div>
+          <div class="faction-c">
+            <h1>10</h1>
+            <i class="icon-reunion"></i>
+          </div>
+        </div>
+      </div>
+      <div class="navbar">
+        <a href="#">lingering echoes</a>
+        <a href="#">first stop</a>
+        <a href="#">terminal</a>
+        <a href="#">path to glory</a>
+        <div class="navbarstrip">
+          welcome back to terra <b>tempest</b> (switch account)
+          <div class="navbar-icon">
+            <img src="https://a.l3n.co/i/BkYdV0.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="tableborder">
+        <div class="maintitle">
+          <div class="topic-title">thread title goes here ooooo</div>
+          <div class="topic-desc">thread description here, woo</div>
+          <a href="#">
+            <div class="button-large">add reply
+          </a>
+        </div>
+        <a href="#">
+          <div class="button-large">new topic
+        </a>
+      </div>
+      <a href="#">
+        <div class="button-large">new poll
+      </a>
+    </div>
+  </div>
+  <div style="--accent1:100,169,173;" class="makinghistory-post" id="USER-GROUP-10">
+    <div class="makinghistory-post-top">
+      <a href="#">permalink</a>
+      <div class="makinghistory-post-btn">quote</div>
+      <div class="makinghistory-post-btn">edit</div>
+      <div class="makinghistory-post-btn">delete</div>
+      <div class="makinghistory-post-user">posted by <b>lua</b> [ they / them ] on OCT 17 2023, 08:24 PM</div>
+    </div>
+    <div class="makinghistory-post-bulk">
+      <div class="postwrap">
+        <div class="post-top">
+          <div class="post-avv"><img src="https://a.l3n.co/i/BIG5ZP.png"></div>
+          <div class="post-stars">
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+          </div>
+          <h1>scourge</h1>
+        </div>
+        <div>
+          its a short lil post.
+        </div>
+      </div>
+      <div class="makinghistory-miniprofile">
+        <div class="minipro">
+          <div class="minioverlay">
+            <h1><b>full name</b>
+              alexandr “sascha” illya levay</h1>
+            <h1><b>status</b>
+              infected</h1>
+            <h1><b>race</b>
+              liberi, snowfinch</h1>
+            <h1><b>faction</b>
+              reunion
+            </h1>
+          </div>
+
+        </div>
+        <div class="minipro-aff">
+          <i class="icon-caster"></i>
+          <h1>caster</h1>
+        </div>
+      </div>
+    </div>
+    <div class="makinghistory-post" id="USER-GROUP-6" style="--accent1:178,43,94;">
+      <div class="makinghistory-post-top">
+        <a href="#">permalink</a>
+        <div class="makinghistory-post-btn">quote</div>
+        <div class="makinghistory-post-btn">edit</div>
+        <div class="makinghistory-post-btn">delete</div>
+        <div class="makinghistory-post-user">posted by <b>lua</b> [ they / them ] on OCT 17 2023, 08:24 PM</div>
+      </div>
+      <div class="makinghistory-post-bulk">
+        <div class="postwrap">
+          <div class="post-top">
+            <div class="post-avv"><img src="https://c.l3n.co/i/VyYLGr.png"></div>
+            <div class="post-stars">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+            </div>
+            <h1>bishop</h1>
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget mi ornare odio luctus lobortis. Duis a dui fringilla, facilisis nisi commodo, sagittis enim. Fusce euismod hendrerit enim quis cursus. Sed pharetra non neque non maximus. Nam tincidunt erat eu euismod vehicula. In hac habitasse platea dictumst. Suspendisse tempor velit massa, id pulvinar arcu interdum vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ut purus at eros mattis ullamcorper nec vitae sem. Nam a nunc ipsum. In pulvinar vel nibh in dapibus. Donec id eros vestibulum, congue arcu nec, accumsan dolor.
+            <p>
+              Sed eu augue feugiat, venenatis mauris eu, fringilla dui. Donec tempus, lectus vitae ultricies porta, metus ligula molestie velit, at ultricies risus velit id libero. Cras convallis quam ac aliquet ullamcorper. Vivamus vel purus at orci dictum rhoncus. Ut facilisis a elit ac gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed tincidunt nulla egestas, sodales risus quis, egestas sapien. Sed efficitur, risus nec vestibulum gravida, lorem metus vehicula neque, ac auctor dolor sem a erat. Aliquam erat volutpat. Suspendisse vitae elementum eros, eget sollicitudin felis.
+            <p>
+              Nulla facilisi. Suspendisse et mollis tellus. Pellentesque in sodales tellus, id ultrices risus. In eget purus vitae eros feugiat facilisis sit amet ut urna. Proin laoreet elit sit amet vulputate laoreet. Aliquam eget nisi at purus venenatis euismod eu ac urna. Sed elementum lectus nec tellus dignissim, id volutpat odio efficitur.
+            <p>
+              Cras viverra ante ac ex blandit iaculis. Donec aliquet mi et tortor condimentum egestas. Vestibulum euismod ullamcorper lacus. Praesent fringilla lacus et felis malesuada suscipit interdum at est. Nullam arcu turpis, lobortis a placerat a, gravida vitae mauris. Donec et eleifend sem. Maecenas euismod aliquet elementum. Morbi fermentum metus nulla, vel fringilla nibh tincidunt vitae. Nullam at nisi sed turpis mollis feugiat et eget sem. Phasellus luctus tincidunt semper. Quisque sit amet venenatis nulla. Cras non nisi quis libero scelerisque dignissim. Nam dapibus varius viverra.
+            <p>
+              Integer facilisis mollis felis, id mattis sem lacinia a. Pellentesque et finibus orci, accumsan varius diam. In laoreet tortor id quam fermentum fermentum. Aenean at aliquet eros. Aenean id purus libero. Fusce at lorem enim. Vivamus vel aliquam arcu. Cras a erat orci. Vivamus tincidunt consectetur rutrum. Duis sed enim porttitor, rutrum arcu pretium, porttitor diam. Nam egestas sed nulla at euismod. Ut accumsan molestie velit, at lacinia diam. Quisque iaculis in ipsum non aliquam. Sed id urna risus. Mauris tempor neque quis mi tempor, ut porta lacus gravida. In pulvinar non ex vel laoreet.
+            <p>
+              Ut placerat urna erat, ut pulvinar massa venenatis in. Donec sed lorem faucibus, lacinia lacus ac, mollis ex. Sed faucibus urna justo. Vestibulum placerat sapien ut dictum venenatis. Maecenas nec scelerisque odio. Donec eu nunc tellus. Proin nec libero diam. Donec nec justo eget ante vestibulum tincidunt. Nullam porta, nunc eget vestibulum mollis, nisi elit ultricies sapien, nec placerat ante tortor id quam.
+            <p>
+              Sed ut placerat leo. Mauris ornare dictum lacus, id vehicula sapien vestibulum consequat. Quisque nec purus eget risus luctus pellentesque. Donec tempor ac leo fringilla luctus. Nam pharetra fringilla vulputate. Maecenas auctor ultrices ornare. Aliquam id rhoncus mauris. Etiam eu nulla id metus ultricies consequat sed ac metus. Sed condimentum consequat est at pulvinar. Duis congue dui vel lobortis ornare. In consectetur, urna venenatis pharetra dapibus, mauris sem egestas turpis, at sagittis elit justo ac velit. Mauris ultricies magna dui, at imperdiet nisi ornare eu. Quisque lectus tellus, dictum in porttitor nec, dictum in neque. Etiam et blandit dolor, vel volutpat magna. Donec sed dignissim enim. Vestibulum convallis rutrum dui, ut tempor risus porta vitae.
+            <p>
+              Pellentesque viverra tempus massa eu pretium. Quisque porttitor nisl sit amet leo feugiat, nec posuere ligula semper. Ut non sapien ex. Pellentesque eu varius sem. Donec sed malesuada odio. Suspendisse potenti. Mauris metus ligula, imperdiet convallis felis congue, bibendum porta felis. Quisque venenatis viverra turpis. In at porttitor erat. Donec ac orci est. Nullam ante massa, pulvinar vel mi ut, aliquam finibus justo. Curabitur egestas ultrices orci, ut dignissim tellus mattis non. Aliquam vulputate lorem vitae enim dictum bibendum.
+          </div>
+        </div>
+        <div class="makinghistory-miniprofile">
+          <div class="minipro" style="background-image:url(https://c.l3n.co/i/Bifs71.png);">
+            <div class="minioverlay">
+              <h1><b>full name</b>
+                fiore salvatici</h1>
+              <h1><b>status</b>
+                infected</h1>
+              <h1><b>race</b>
+                liberi, dove</h1>
+              <h1><b>faction</b>
+                rhodes island
+              </h1>
+            </div>
+
+          </div>
+          <div class="minipro-aff">
+            <i class="icon-sniper"></i>
+            <h1>sniper</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+</body>
+
+</html>
+
+<link href="https://files.jcink.net/uploads2/oripathy/font_icons/lingering_echoes_embedded.css" rel="stylesheet">
+<script src="//static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script src="//static.tumblr.com/kmw8hta/NaEnnqkxd/tooltip.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
